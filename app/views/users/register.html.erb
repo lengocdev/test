@@ -1,0 +1,42 @@
+<div class="outer-wrapper d-flex align-items-center" style="height: 100%">
+  <div class="wrap" style="margin-top: 90px; margin-bottom: 20px">
+    <div class="login-box">
+
+      <div class="left text-center">
+        <a class="lg-logo">
+          LOGO
+        </a>
+
+        <p class="mb-0">Already have an account?</p>
+        <p>Sign in to your account</p>
+        <a href="<%= login_users_url %>" class="btn btn-register">Sign In</a>
+      </div>
+      <div class="right text-center">
+        <h2>Sign Up </h2>
+        <%= form_for @user , url: user_register_users_url, :html => {:id => "signupForm"} do |f|  %>
+          <div class="md-form">
+            <%= f.text_field :first_name , :class=>"form-control" , :id => "firstname"%>
+            <label for="firstname">First Name</label>
+          </div>
+          <div class="md-form">
+            <%= f.text_field :last_name , :class=>"form-control" , :id => "lastname"%>
+            <label for="lastname">Last Name</label>
+          </div>
+
+          <div class="md-form">
+            <%= f.email_field :email , :class=>"form-control" , :id => "email"%>
+            <label for="email">Email</label>
+          </div>
+
+          <div class="md-form">
+            <%= f.password_field :password , :class=>"form-control" , :id => "password"%>
+            <label for="password">Password</label>
+          </div>
+          <button type="submit" class="btn btn-register">Register</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+

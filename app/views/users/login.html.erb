@@ -1,0 +1,44 @@
+<main role="main">
+  <div class="outer-wrapper d-flex align-items-center">
+    <div class="wrap"  style="margin-top: 90px; margin-bottom: 20px">
+      <div class="login-box">
+        <div class="left text-center">
+          <a href="" class="lg-logo">LOGO</a>
+
+          <p class="mb-0">Don't have an account?</p>
+          <p>Register an account now!</p>
+          <a href="<%= register_users_url %>" class="btn btn-register">Register</a>
+        </div>
+
+        <div class="right text-center">
+          <h2>Sign In </h2>
+          <%= form_for :user, url: user_login_users_url, :html => {:id => "signinForm"} do |f|  %>
+            <div class="md-form">
+              <%= f.email_field :email , :class=>"form-control" , :id => "email"%>
+              <label for="email">Email</label>
+            </div>
+
+            <div class="md-form">
+              <%= f.password_field :password , :class=>"form-control" , :id => "password"%>
+              <label for="password">Password</label>
+            </div>
+            <a href="" class="d-block text-right text-white">Forgot password?</a>
+            <button type="submit" class="btn btn-register">Sign in</button>
+          <% end %>
+
+          <div class="social-head">
+            <p class="para">Or Sign In with </p>
+          </div>
+          <div class="social-sign d-flex justify-content-center">
+            <div class="fb">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="google">
+              <a href=""><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
